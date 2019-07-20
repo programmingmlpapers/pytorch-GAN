@@ -33,7 +33,5 @@ class Generator(nn.Module):
         :param z: Latent space vector - size: batch_size x latent_size
         :return: Tensor of self.img_size
         """
-
-        #z = z.view(-1, self.latent_size)
         return self.model(z)
 

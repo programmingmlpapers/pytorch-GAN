@@ -34,7 +34,4 @@ class Discriminator(nn.Module):
         """
         # Resize x from a H x W img to a vector
         x = x.view(-1, self.img_size)
-        #noise = t.randn_like(x, requires_grad=True)
-        #x = x + noise
-
         return self.model(x).clamp(1e-9)
