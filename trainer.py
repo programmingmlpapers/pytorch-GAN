@@ -116,7 +116,7 @@ class MNISTTrainer:
             z = self.data.sample_latent_space(batch_size=36).to(device)
             generated_imgs = self.G(z)
 
-            img_grid = torchvision.utils.make_grid(generated_imgs.reshape(8, 1, 28, 28), nrow=6)
+            img_grid = torchvision.utils.make_grid(generated_imgs.reshape(36, 1, 28, 28), nrow=6)
             self.writer.add_image('generated_images', img_grid, epoch)
 
         # Close tensorboard writer when we're done with training
