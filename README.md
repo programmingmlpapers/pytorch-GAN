@@ -5,6 +5,7 @@ A PyTorch Implementation of Goodfellow et al.'s Paper on Generative Adversarial 
 Currently has MNIST experiment implemented. Built with torch 1.1.0 and python3.6.
 
 `pip install -r requirements.txt`
+
 `python train.py --epochs 300 --lr 1e-4 --batch-size 128`
 
 Once train.py is running one can open a new shell and running tensboard in order to track various metrics and current generated images during training.
