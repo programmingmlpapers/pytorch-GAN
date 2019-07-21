@@ -73,7 +73,7 @@ class MNISTTrainer:
                 #####################################
 
                 # Load another batch of latent vectors device
-                z = self.data.sample_latent_space().to(device)
+                z = self.data.sample_latent_space(batch_size=len(real_imgs)).to(device)
 
                 # Get generated images and and record loss
                 fake_imgs = self.G(z)
@@ -94,13 +94,10 @@ class MNISTTrainer:
             #####################################
 
             log_str = f"\n{'Completed Epoch:':<20}{epoch + 1:<10}"
-
             # Value to normalize so we get loss/sample
             norm = len(self.data.mnist_dataset)
-
             log_str += f"\n{'Discriminator Loss:':<20}{running_d_loss/norm:<10}"
             log_str += f"\n{'Generator Loss:':<20}{running_g_loss/norm:<10}\n"
-
             print(log_str)
 
             # Add information to Tensorboard

@@ -6,7 +6,7 @@ Currently has MNIST experiment implemented. Built with torch 1.1.0 and python3.6
 
 `pip install -r requirements.txt`
 
-`python train.py --epochs 300 --lr 1e-4 --batch-size 128`
+`python train.py --epochs 300 --lr 1e-4 --batch-size 32`
 
 Once train.py is running one can open a new shell and running tensboard in order to track various metrics and current generated images during training.
 
@@ -19,7 +19,7 @@ Once train.py is running one can open a new shell and running tensboard in order
 --epochs EPOCHS       number of epochs to train for (default: 300)
   --lr LR               learning rate for optimizer (default: 1e-4)
   --batch-size BATCH_SIZE
-                        number of examples in a batch (default: 128)
+                        number of examples in a batch (default: 32)
   --device DEVICE       device to train on (default: cuda:0 if cuda is
                         available otherwise cpu)
   --latent-size LATENT_SIZE

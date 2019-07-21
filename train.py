@@ -14,8 +14,8 @@ if __name__ == '__main__':
                         help='number of epochs to train for (default: 300)')
     parser.add_argument('--lr', type=float, default=1e-4,
                         help='learning rate for optimizer (default: 1e-4)')
-    parser.add_argument('--batch-size', type=int, default=128,
-                        help='number of examples in a batch (default: 128)')
+    parser.add_argument('--batch-size', type=int, default=32,
+                        help='number of examples in a batch (default: 32)')
     parser.add_argument('--device', type=int, default=t.device("cuda:0" if t.cuda.is_available() else "cpu"),
                         help='device to train on (default: cuda:0 if cuda is available otherwise cpu)')
 
