@@ -1,3 +1,5 @@
+Repo has moved to: https://github.com/ddehueck/pytorch-GAN
+
 # pytorch-GAN
 A PyTorch Implementation of Goodfellow et al.'s Paper on Generative Adversarial Networks. Find the paper at: https://arxiv.org/pdf/1406.2661.pdf
 
